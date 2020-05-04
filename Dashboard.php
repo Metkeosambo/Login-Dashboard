@@ -3,22 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?ver=<?= rand() ?>">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-<!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <title>DashBoard</title>
 </head>
 <body>
@@ -47,7 +36,7 @@
 <!-- Bootstrap row -->
 <div class="row" id="body-row">
     <!-- Sidebar -->
-    <div id="sidebar-container" class="sidebar-expanded d-none d-md-block"><!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
+    <div id="sidebar-container" class="sidebar-expanded d-md-block"><!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
         <!-- Bootstrap List Group -->
         <ul class="list-group">
             <!-- Separator with title -->
@@ -179,26 +168,65 @@
     </div><!-- sidebar-container END -->
 
     <!-- MAIN -->
-    <div class="col">
-        
-        <h1>
-            Collapsing Menu
-            <small class="text-muted">Version 2.1</small>
-        </h1>
-        
-        
-        <div class="card">
-            <h4 class="card-header">Requirements</h4>
-            <div class="card-body">
-                <ul>
-                    <li>JQuery</li>
-                    <li>Bootstrap 4 beta-3</li>
-                </ul>
-            </div>
+    <div class="col-md-9 col-xs-9 col-lg-9 col-sm-9">
+        <div class="row">
+         <div class="col-md-2 col-xs-3 col-lg-3 col-sm-2">
+         <div class="middle">
+	     <a class="btn-edit" href="#">
+        	<i class="fab fa-facebook-f icon"></i>	
+	    </a>
+         </div>
+         </div>
+         <div class="col-md-2 col-xs-3 col-lg-3 col-sm-2">
+    <div class="middle">
+	     <a class="btn-edit" href="#">
+         <i class="fab fa-youtube icon"></i>	
+	    </a>
+         </div>
         </div>
-       
-
-
+        <div class="col-md-2 col-xs-3 col-lg-3 col-sm-2">
+    <div class="middle">
+	     <a class="btn-edit" href="#">
+         <i class="fab fa-google icon"></i>	
+	    </a>
+         </div>
+        </div>
+        <div class="col-md-2 col-xs-3 col-lg-3 col-sm-2">
+    <div class="middle">
+	     <a class="btn-edit" href="#">
+         <i class="far fa-file-word icon"></i>	
+	    </a>
+         </div>
+        </div>
+        <div class="col-md-2 col-xs-3 col-lg-3 col-sm-2">
+         <div class="middle">
+	     <a class="btn-edit" href="#">
+         <i class="far fa-file-excel icon"></i>	
+	    </a>
+         </div>
+         </div>
+         <div class="col-md-2 col-xs-3 col-lg-3 col-sm-2">
+    <div class="middle">
+	     <a class="btn-edit" href="#">
+         <i class="fab fa-telegram-plane icon"></i>	
+	    </a>
+         </div>
+        </div>
+        <div class="col-md-2 col-xs-3 col-lg-3 col-sm-2">
+    <div class="middle">
+	     <a class="btn-edit" href="#">
+         <i class="far fa-folder icon"></i>
+	    </a>
+         </div>
+        </div>
+        <div class="col-md-2 col-xs-3 col-lg-3 col-sm-2">
+    <div class="middle">
+	     <a class="btn-edit" href="#">
+         <i class="fab fa-linkedin icon"></i>	
+	    </a>
+         </div>
+        </div>
+</div><!-- Main Row END -->
     </div><!-- Main Col END -->
     
 </div><!-- body-row END -->
@@ -208,9 +236,9 @@
 </section>
 <!--Section Footer -->
 <section>
-    <div class="container-fliud">
+    <div class="container-fluid">
         <div class="row">
-          <div id="footer" class="col-lg-12">
+          <div id="footer" class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
 
           </div>
         </div>
