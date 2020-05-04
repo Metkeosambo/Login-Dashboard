@@ -6,6 +6,9 @@
         margin-left: 0;
         margin-right: 0;
     }
+    #left-menu{
+        margin-left: -15px;
+    }
 
     #sidebar-container {
         min-height: 63vh;
@@ -92,9 +95,16 @@
     height: 140px;
     background-color: #d42931;
 }
+#contain-footer{
+    width: 100%;
+    height: 50px;
+}
+#reserve{
+    margin-top: 50px;
+}
 /* Style Content */
 .middle{
-	padding-top: 50px;
+	padding-top: 70px;
 	width: 100%;
 	text-align: center;
 }
@@ -148,14 +158,20 @@
 	}
 }
 /* Use a media query to add a breakpoint at 800px: */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 570px) {
     .sidebar-expanded {
         width: 100%;
     }
+    .middle{
+        padding-top: 20px;
+
+    }        
+    
     
     .sidebar-collapsed {
         /*width: 60px;*/
         width: 100%;
     }
   }
+  
   

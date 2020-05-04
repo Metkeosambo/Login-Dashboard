@@ -35,8 +35,9 @@
   
 <!-- Bootstrap row -->
 <div class="row" id="body-row">
+    <div class="col-lg-3 col-md-3 col-xs-12  col-sm-12" id="left-menu">
     <!-- Sidebar -->
-    <div id="sidebar-container" class="sidebar-expanded d-md-block"><!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
+    <div id="sidebar-container" class=" sidebar-expanded d-md-block"><!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
         <!-- Bootstrap List Group -->
         <ul class="list-group">
             <!-- Separator with title -->
@@ -166,60 +167,62 @@
 
         </ul><!-- List Group END-->
     </div><!-- sidebar-container END -->
-
+</div><!-- END Col  -->
     <!-- MAIN -->
-    <div class="col-md-9 col-xs-9 col-lg-9 col-sm-9">
+    <div class="col-lg-9 col-md-9 col-xs-12  col-sm-12">
         <div class="row">
-         <div class="col-md-2 col-xs-3 col-lg-3 col-sm-2">
+         <div class="col-lg-3 col-md-3 col-xs-4  col-sm-4">
          <div class="middle">
 	     <a class="btn-edit" href="#">
         	<i class="fab fa-facebook-f icon"></i>	
 	    </a>
          </div>
          </div>
-         <div class="col-md-2 col-xs-3 col-lg-3 col-sm-2">
+         <div class="col-lg-3 col-md-3 col-xs-4  col-sm-4">
     <div class="middle">
 	     <a class="btn-edit" href="#">
          <i class="fab fa-youtube icon"></i>	
 	    </a>
          </div>
         </div>
-        <div class="col-md-2 col-xs-3 col-lg-3 col-sm-2">
+        <div class="col-lg-3 col-md-3 col-xs-4  col-sm-4">
     <div class="middle">
 	     <a class="btn-edit" href="#">
          <i class="fab fa-google icon"></i>	
 	    </a>
          </div>
         </div>
-        <div class="col-md-2 col-xs-3 col-lg-3 col-sm-2">
+        <div class="col-lg-3 col-md-3 col-xs-4  col-sm-4">
     <div class="middle">
 	     <a class="btn-edit" href="#">
          <i class="far fa-file-word icon"></i>	
 	    </a>
          </div>
         </div>
-        <div class="col-md-2 col-xs-3 col-lg-3 col-sm-2">
+       </div> <!--End Row -->
+        <div class="row">
+        <div class="col-lg-3 col-md-3 col-xs-4  col-sm-4">
          <div class="middle">
 	     <a class="btn-edit" href="#">
          <i class="far fa-file-excel icon"></i>	
 	    </a>
          </div>
          </div>
-         <div class="col-md-2 col-xs-3 col-lg-3 col-sm-2">
+         <div class="col-lg-3 col-md-3 col-xs-4  col-sm-4">
     <div class="middle">
 	     <a class="btn-edit" href="#">
          <i class="fab fa-telegram-plane icon"></i>	
 	    </a>
          </div>
         </div>
-        <div class="col-md-2 col-xs-3 col-lg-3 col-sm-2">
+        <div class="col-lg-3 col-md-3 col-xs-4  col-sm-4">
     <div class="middle">
 	     <a class="btn-edit" href="#">
          <i class="far fa-folder icon"></i>
 	    </a>
          </div>
         </div>
-        <div class="col-md-2 col-xs-3 col-lg-3 col-sm-2">
+        <div class="col-lg-3 col-md-3 col-xs-4  col-sm-4">
     <div class="middle">
 	     <a class="btn-edit" href="#">
          <i class="fab fa-linkedin icon"></i>	
@@ -239,11 +242,30 @@
     <div class="container-fluid">
         <div class="row">
           <div id="footer" class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
+              <div class="row">
+                  <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12" id="contain-footer">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
 
-          </div>
-        </div>
-    </div>
-</sectin>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+
+                        </div>
+
+                    </div><!-- End Row -->
+                  </div><!-- End Col -->
+              <div class=" col-md-12 col-sm-12 col-lg-12 col-xs-12 text-center" id="reserve" style="background: #0b78a5;padding:10px;text-align:center;width:100% !important">
+            <div style="padding-bottom:0px;margin-bottom: 0;color:white;">© រក្សា&#8203;សិទ្ធិ&#8203;គ្រប់&#8203;យ៉ាង&#8203;ដោយ ក្រុមហ៊ុន ធើបូថេក&#8203; ឯ.ក &#8203;ឆ្នាំ&#8203; 2020</div> 
+            </div>
+            </div>
+            </div><!-- End Row -->
+              </div> <!-- End Col -->
+        </div> <!-- End Row -->
+    </div><!-- End Contain -->
+</section>
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
