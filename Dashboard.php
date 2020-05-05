@@ -20,7 +20,7 @@ session_start();
 <div class="container-fluid "> 
 <div class="row">
 <div class="col-md-2 col-sm-2 col-lg-2 col-xs-2">
- <img src="images/turbotech.png" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+ <img src="images/turbotech.png" style="text-align:center;" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
 </div> <!-- End Logo -->
 <div id="header" class="col-md-5 col-sm-5 col-lg-5 col-xs-5">
 </div>
@@ -32,7 +32,7 @@ session_start();
 </div>
 <div class="col-md-2 col-sm-2 col-lg-2 col-xs-2">
 <div class='user_pro'>
-            <div class='row' style="padding-top:1%;">
+            <div style="padding-top:1%;">
                 <a href="my-profile.php"><img src="images/download.png" alt="" class="img-circle"></a>
             </div>
         </div>
@@ -185,7 +185,7 @@ session_start();
          </div>
          <div class="col-lg-3 col-md-3 col-xs-4  col-sm-4">
     <div class="middle">
-	     <a class="btn-edit" href="<?php exec('"E:\Program Files (X86)\Telegram Desktop\Telegram.exe"'); ?>"> 
+	     <a class="btn-edit" href="<?php // exec('"E:\Program Files (X86)\Telegram Desktop\Telegram.exe"'); ?>"> 
          <i class="fab fa-telegram-plane icon"></i>	
 	    </a>
          </div>
@@ -232,6 +232,7 @@ session_start();
 
                     </div><!-- End Row -->
                   </div><!-- End Col -->
+
               <div id="footer" class=" col-md-12 col-sm-12 col-lg-12 col-xs-12 text-center" id="reserve" style="background: #d42931;padding:10px;text-align:center;width:100%; !important">
             <div style="padding-bottom:0px;margin-bottom: 0;color:white;">© រក្សា&#8203;សិទ្ធិ&#8203;គ្រប់&#8203;យ៉ាង&#8203;ដោយ ក្រុមហ៊ុន ធើបូថេក&#8203; ឯ.ក &#8203;ឆ្នាំ&#8203; 2020</div> 
             </div>
