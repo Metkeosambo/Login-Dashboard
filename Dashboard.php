@@ -1,7 +1,9 @@
+<script>
 <?php
 include "connect.php";
 session_start();
-?>
+	?>
+</script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,23 +21,74 @@ session_start();
 <div class="fixed-top">
 <div class="container-fluid "> 
 <div class="row">
-<div class="col-md-2 col-sm-2 col-lg-2 col-xs-2">
- <img src="images/turbotech.png" style="text-align:center;" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+<div class="col-md-2 col-sm-2 col-lg-2 col-xs-2 image-head">
+ <img src="images/turbotech.png" style="text-align:center;" id="head-image"class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
 </div> <!-- End Logo -->
-<div id="header" class="col-md-5 col-sm-5 col-lg-5 col-xs-5">
+<div id="header" class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
+   <div class="row">
+       <div class="fk col-md-12 col-sm-12 col-lg-12 col-xs-12">
+       <h6 class=" widget-title">IMPROVE</h6>
+       </div>
+   </div>
+   <div class="row">
+       <div class="col-md-5 col-sm-5 col-lg-5 col-xs-5">
+       <ul>
+       <li><i class="fas fa-user-graduate" style="color:#1fa8e0;"></i>    Intelligence</li>
+       <li><i class="fas fa-handshake" style="color:#1fa8e0;"></i> Morality</li>
+       <li><i class="fas fa-user-tie" style="color:#1fa8e0;"></i> Professional & Accountability</li>
+      </ul>  
+       </div>
+       <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
+       <ul>
+       <li><i class="fas fa-user-clock" style="color:#1fa8e0;"></i> Responsibility</li>
+       <li><i class="fas fa-people-carry" style="color:#1fa8e0;"></i> Optimistic</li>
+       
+      </ul>  
+       </div>
+       <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
+       <ul>
+       <li><i class="fas fa-user-shield" style="color:#1fa8e0;"></i> Vigilant</li>
+       <li><i class="fas fa-user-check"  style="color:#1fa8e0;"></i> Efficience</li>
+      </ul>  
+       </div>
+   </div>
 </div>
-
-<div class="col-md-3 col-sm-3 col-lg-3 col-xs-3 search">
-   <form class="form-inline my-3 my-lg-0 ">
-            <input class="form-control mr-sm-3 my-sm-0 " type="text" placeholder="ស្វែងរក" id="search">
+<div class="col-md-2 col-sm-2 col-lg-2 col-xs-2 search">
+   <form class="form-inline my-2 my-lg-0 ">
+            <input class="form-control mr-sm-2 my-sm-0 " type="text" placeholder="ស្វែងរក" id="search">
    </form>
 </div>
 <div class="col-md-2 col-sm-2 col-lg-2 col-xs-2">
 <div class='user_pro'>
-            <div style="padding-top:1%;">
+            <!-- <div style="padding-top:1%;">
                 <a href="my-profile.php"><img src="images/download.png" alt="" class="img-circle"></a>
             </div>
-        </div>
+         -->
+        <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a class="btn account dropdown-toggle" data-toggle="dropdown" href="#">
+                            <img alt="" src="images/download.png">
+                        </a>
+                        <ul class="dropdown-menu pull-right">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-user"></i> Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-key"></i> Change Password
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="logout.php">
+                                    <i class="fa fa-sign-out"></i> Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+</div>
 </div>
 <div id="line" class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
 
@@ -69,33 +122,46 @@ session_start();
             <!-- /END Separator -->
             <!-- Menu with submenu -->
             <?php
-            //     if($_SESSION['position']=='Admin'){
-            //         $sql="select * from menu where status=1";
-            //         $rs=pg_query($sql);
-            //         while($row = pg_fetch_assoc($rs)){
-            //          echo  "<a href='$row[link]' class='bg-dark list-group-item list-group-item-action'>
-            //          <div class='d-flex w-100 justify-content-start align-items-center'>
-            //          <span class='$row[icon]'></span>
-            //          <span class='menu-collapsed'>$row[Title]</span>    
-            //      </div>
-            //  </a>  
-            //          "; 
+                     if($_SESSION['role']=='Admin'){
+                        $sql="select * from menu where status=1 order by id ASC";
+                        $rs=pg_query($sql);
+                        while($row1 = pg_fetch_assoc($rs)){
+                         echo  "<a href='$row1[link]' class='bg-dark list-group-item list-group-item-action'>
+                         <div class='d-flex w-100 justify-content-start align-items-center'>
+                         <span class='$row1[icon]'></span>
+                         <span class='menu-collapsed'>$row1[title]</span>    
+                     </div>
+                 </a>  
+                         "; 
+                          
+                               
+                }
+                     }else{
+                     $sql="select * from menu where title ='$_SESSION[role]' AND status=1 order by id ASC";
+                     $rs=pg_query($sql);
+                     while($row1 = pg_fetch_assoc($rs)){
+                      echo  "<a href='$row1[link]' class='bg-dark list-group-item list-group-item-action'>
+                      <div class='d-flex w-100 justify-content-start align-items-center'>
+                      <span class='$row1[icon]'></span>
+                      <span class='menu-collapsed'>$row1[title]</span>    
+                  </div>
+              </a>  
+                      "; 
                        
-            //         }
-            // }else($SESSION['position']=='')
-
-            $sql="select * from menu where status=1";
-            $rs=pg_query($sql);
-            while($row = pg_fetch_assoc($rs)){
-             echo  "<a href='$row[link]' class='bg-dark list-group-item list-group-item-action'>
-             <div class='d-flex w-100 justify-content-start align-items-center'>
-             <span class='$row[icon]'></span>
-             <span class='menu-collapsed'>$row[Title]</span>    
-         </div>
-     </a>  
-             "; 
+                            
+             }}
+    //         $sql="select * from menu where status=1";
+    //         $rs=pg_query($sql);
+    //         while($row = pg_fetch_assoc($rs)){
+    //          echo  "<a href='$row[link]' class='bg-dark list-group-item list-group-item-action'>
+    //          <div class='d-flex w-100 justify-content-start align-items-center'>
+    //          <span class='$row[icon]'></span>
+    //          <span class='menu-collapsed'>$row[Title]</span>    
+    //      </div>
+    //  </a>  
+    //          "; 
                
-            }
+    //         }
             ?>
             <!-- <a href="#submenu1" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-start align-items-center">
@@ -148,9 +214,12 @@ session_start();
         <div class="row">
          <div class="col-lg-3 col-md-3 col-xs-4  col-sm-4">
          <div class="middle">
-	     <a class="btn-edit" target="_blank" href="https://www.facebook.com/turbotechsolutions/">
-        	<i class="fab fa-facebook-f icon"></i>	
-	    </a>
+             <?php
+             $sql="select * from content where ";
+	     echo "<a class='btn-edit' target='_blank' href=''>
+         <i class=''></i>	
+     </a>";
+        ?>
          </div>
          </div>
          <div class="col-lg-3 col-md-3 col-xs-4  col-sm-4">
@@ -178,7 +247,7 @@ session_start();
         <div class="row">
         <div class="col-lg-3 col-md-3 col-xs-4  col-sm-4">
          <div class="middle">
-	     <a class="btn-edit" target="_blank" href="file:///c|\windows\System32\calc.exe">
+	     <a class="btn-edit" target="_blank" href="//file://c|\windows\System32\calc.exe">
          <i class="far fa-file-excel icon"></i>	
 	    </a>
          </div>
