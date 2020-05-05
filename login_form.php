@@ -33,7 +33,7 @@
 							<img src="../Staff_loginV2/images/Turbotech_logo.png" alt="">
 						</span> -->
 					<div class="login100-form-logo">
-						<img class="logo_img" src="../Staff_loginV2/images/Turbotech_logo.png" alt="">
+						<img class="logo_img" src="images/Turbotech_logo.png" alt="">
 					</div>
 					<span class="login100-form-title p-b-34 p-t-27">
 						Log in
