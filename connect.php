@@ -1,3 +1,3 @@
 <?php
-    $con = pg_connect("host=localhost dbname=turbotech_test user=postgres password=sambo_123!!");
+    $con = pg_connect("host=localhost dbname=dbTest user=postgres password=123");
 ?>

@@ -17,10 +17,19 @@
             }
             if ($txtid == $tbId){
                 if($txtpass == $tbPassword){
-                    echo " <a href='http://www.youtube.com'>Click here </a> ";
-                }else 
-                    echo "Incorrect Password";
-            }else echo "Incorrect Your ID";    
+                    include "Dashboard.php";
+                    session_start();
+                }else {
+                    echo '<script type="text/javascript">';
+                    echo ' alert("លេខសំងាត់ មិនត្រឹមត្រូវ!");';
+                      //not showing an alert box.
+                    echo '</script>';
+                }
+            }else {
+                echo '<script type="text/javascript">';
+                echo ' alert("Please input the correct ID !")';  //not showing an alert box.
+                echo '</script>';  
+            } 
     }
     catch (PDOException $e) {
         $Imessage = "Error: " . $e->getMessage();
