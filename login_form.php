@@ -90,7 +90,9 @@
 				}
 				if ($txtid == $tbId){
 					if($txtpass == $tbPassword){
-						header("Location: Dashboard.php");	
+						header("Location: Dashboard.php");
+						
+						
 					}else {
 						echo '<script type="text/javascript">';
 						echo ' alert("លេខសំងាត់ មិនត្រឹមត្រូវ!");';//not showing an alert box.
