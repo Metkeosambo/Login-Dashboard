@@ -34,11 +34,11 @@ session_start();
        <div class="col-md-5 col-sm-5 col-lg-5 col-xs-5">
        <ul>
        <li><i class="fas fa-user-graduate" style="color:#1fa8e0;"></i>    Intelligence</li>
-       <li><i class="fas fa-handshake" style="color:#1fa8e0;"></i> Morality</li>
+       <li><i class="fas fa-handshake" style="color:#1fa8e0;"></i>Morality</li>
        <li><i class="fas fa-user-tie" style="color:#1fa8e0;"></i> Professional & Accountability</li>
       </ul>  
        </div>
-       <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
+       <div class="col-md-3 col-sm-4 col-lg-4 col-xs-4">
        <ul>
        <li><i class="fas fa-user-clock" style="color:#1fa8e0;"></i> Responsibility</li>
        <li><i class="fas fa-people-carry" style="color:#1fa8e0;"></i> Optimistic</li>
@@ -123,9 +123,10 @@ session_start();
             <!-- Menu with submenu -->
             <?php
                      if($_SESSION['role']=='Admin'){
-                        $sql="select * from menu where status=1 order by id ASC";
-                        $rs=pg_query($sql);
-                        while($row1 = pg_fetch_assoc($rs)){
+                        // $sql="select * from menu where status=1 order by id ASC";
+                        $stmt = $con->prepare("select * from menu where status=1 order by id ASC");
+                        $stmt->execute();
+                        while($row1=$stmt->fetch()){
                          echo  "<a href='$row1[link]' class='bg-dark list-group-item list-group-item-action'>
                          <div class='d-flex w-100 justify-content-start align-items-center'>
                          <span class='$row1[icon]'></span>
@@ -137,9 +138,9 @@ session_start();
                                
                 }
                      }else{
-                     $sql="select * from menu where title ='$_SESSION[role]' AND status=1 order by id ASC";
-                     $rs=pg_query($sql);
-                     while($row1 = pg_fetch_assoc($rs)){
+                     $stmt = $con->prepare("select * from menu where title='$_SESSION[role]' AND status=1");
+                     $stmt->execute();
+                        while($row1=$stmt->fetch()){
                       echo  "<a href='$row1[link]' class='bg-dark list-group-item list-group-item-action'>
                       <div class='d-flex w-100 justify-content-start align-items-center'>
                       <span class='$row1[icon]'></span>
@@ -216,8 +217,8 @@ session_start();
          <div class="middle">
              <?php
              $sql="select * from content where ";
-	     echo "<a class='btn-edit' target='_blank' href=''>
-         <i class=''></i>	
+	     echo "<a class='btn-edit' target='_blank' href='#'>
+         <i class='fab fa-facebook icon'></i>	
      </a>";
         ?>
          </div>

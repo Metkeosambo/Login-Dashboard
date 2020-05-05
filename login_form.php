@@ -1,4 +1,13 @@
-
+<script>
+	<?php
+	session_start();
+	if($_SESSION["logout"]=="logout"){
+    ?> alert("You have Sucessfully logged out");
+      //header('http://main.php');
+      <?php
+		
+	}?>
+</script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +38,7 @@
 		<!-- <div class="container-login100" style="background-image: url('images/angkor_wat_wall.jpg');"> -->
 			<div class="container-login100"> 
 				<div class="wrap-login100">
-				<form class="login100-form validate-form" action="" method="POST">
+				<form class="login100-form validate-form" action="login_DB.php" method="POST">
 						<!-- <span class="login100-form-logo">
 							<img src="../Staff_loginV2/images/Turbotech_logo.png" alt="">
 						</span> -->
@@ -39,6 +48,7 @@
 					<span class="login100-form-title p-b-34 p-t-27">
 						Log in
 					</span>
+
 					<div class="wrap-input100 validate-input" data-validate = "Enter ID">
 						<input class="input100" type="text" name="txtid" required="required" placeholder="Your ID">
 						<span class="focus-input100" data-placeholder="&#xf207;"></span>
@@ -55,7 +65,7 @@
 						</label>
 					</div>
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn" name="btnLogin">
+						<button class="login100-form-btn" name="btnLogin" onclick="">
 							Login
 						</button>
 						<!-- <input class="login100-form-btn" type="submit" name="btnLogin" value="Login"> -->
@@ -69,46 +79,19 @@
 			</div>
 		</div>
 	</div>
+
+	<div id="dropDownSelect1"></div>
+	<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+	<!--===============================================================================================-->
+	<!-- <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="vendor/select2/select2.min.js"></script>
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>	
+	<script src="vendor/countdowntime/countdowntime.js"></script>	
+	<script src="js/main.js"></script> -->
 </body>
-</html> 
-
-<?php
-
-	$Imessage = '';
-	$tbId = '';
-    if(isset($_POST['btnLogin'])){
-        $txtid = $_POST['txtid'];
-		$txtpass = $_POST['txtpassword'];
-		try {
-			$conn = new PDO("pgsql:host=localhost;dbname=DBAdmin", "postgres", "123");
-			$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);    
-			$stmt = $conn->prepare("SELECT * From tbl_admin2 WHERE id='$txtid'");
-			$stmt->execute(); 
-				while($row=$stmt->fetch()){  
-						$tbId=$row['id'];
-						$tbPassword=$row['password'];
-				}
-				if ($txtid == $tbId){
-					if($txtpass == $tbPassword){
-						header("Location: Dashboard.php");
-						
-						
-					}else {
-						echo '<script type="text/javascript">';
-						echo ' alert("លេខសំងាត់ មិនត្រឹមត្រូវ!");';//not showing an alert box.
-						echo '</script>';
-					}
-				}else {
-					echo '<script type="text/javascript">';
-					echo ' alert("Please input the correct ID !")';  //not showing an alert box.
-					echo '</script>';  
-				} 
-			
-		}
-		catch (PDOException $e) {
-			$Imessage = "Error: " . $e->getMessage();
-		}
-		echo $Imessage;
-	}
-?>
-
+</html>
