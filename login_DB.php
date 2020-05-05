@@ -17,7 +17,9 @@
             }
             if ($txtid == $tbId){
                 if($txtpass == $tbPassword){
-                    echo " <a href='http://www.youtube.com'>Click here </a> ";
+                    include "Dashboard.php";
+                    session_start();
+                    // echo " <a href='http://www.youtube.com'>Click here </a> ";
                 }else 
                     echo "Incorrect Password";
             }else echo "Incorrect Your ID";    
