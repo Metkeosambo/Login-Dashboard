@@ -1,9 +1,18 @@
 <script>
 	<?php
 	session_start();
+<<<<<<< HEAD
 	$_SESSION["logout"]=="logout";
     ?> 
 
+=======
+	if($_SESSION["logout"]=="logout"){
+    ?> alert("You have Sucessfully logged out");
+      //header('http://main.php');
+      <?php
+		
+	}?>
+>>>>>>> 7df285b6919e6f1b1a273fa04a3104fedd4794c1
 </script>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +44,7 @@
 		<!-- <div class="container-login100" style="background-image: url('images/angkor_wat_wall.jpg');"> -->
 			<div class="container-login100"> 
 				<div class="wrap-login100">
-				<form class="login100-form validate-form" action="" method="POST">
+				<form class="login100-form validate-form" action="login_DB.php" method="POST">
 						<!-- <span class="login100-form-logo">
 							<img src="../Staff_loginV2/images/Turbotech_logo.png" alt="">
 						</span> -->
@@ -76,6 +85,7 @@
 			</div>
 		</div>
 	</div>
+<<<<<<< HEAD
 </body>
 </html> 
 <?php
@@ -121,6 +131,12 @@
 	<div id="dropDownSelect1"></div>
 	<script src="js/jquery-3.4.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+=======
+
+	<div id="dropDownSelect1"></div>
+	<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+>>>>>>> 7df285b6919e6f1b1a273fa04a3104fedd4794c1
 	<!--===============================================================================================-->
 	<!-- <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 	<script src="vendor/animsition/js/animsition.min.js"></script>

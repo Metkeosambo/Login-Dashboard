@@ -6,6 +6,7 @@ session_start();
 </script>
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -91,16 +92,12 @@ session_start();
 </div>
 </div>
 <div id="line" class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
+=======
+<?php include ('header.php') ?>
+>>>>>>> 7df285b6919e6f1b1a273fa04a3104fedd4794c1
 
-</div>
-</div> <!-- End row --> 
-</div><!-- End container-->
-</div>
-</section>
-<div id="line" class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
-
-</div>
 <section class="menu">
+<<<<<<< HEAD
 <div class="container-fluid p-0">
   
 <!-- Bootstrap row -->
@@ -211,16 +208,40 @@ session_start();
     </div><!-- sidebar-container END -->
 </div><!-- END Col  -->
     <!-- MAIN -->
+=======
+<?php include ('leftsidemenu.php') ?>
+    <!-- MAIN Contain -->
+>>>>>>> 7df285b6919e6f1b1a273fa04a3104fedd4794c1
     <div class="col-lg-9 col-md-9 col-xs-12  col-sm-12" id="main-con">
         <div class="row">
-         <div class="col-lg-3 col-md-3 col-xs-4  col-sm-4">
-         <div class="middle">
              <?php
+<<<<<<< HEAD
              $sql="SELECT * from content where ";
 	     echo "<a class='btn-edit' target='_blank' href='#'>
          <i class='fab fa-facebook icon'></i>	
+=======
+               $stmt1 = $con->prepare("select id from menu where title='$_SESSION[role]' AND status=1");
+               $stmt1->execute();
+               while($row=$stmt1->fetch()){
+                $id = $row['id'];
+               }
+              $stmt = $con->prepare("select * from content where id_menu='$id' AND status=1");
+              $stmt->execute();
+              while($row1=$stmt->fetch()){
+              echo "
+              
+              <div class='col-lg-3 col-md-3 col-xs-4  col-sm-4'>
+              <div class='middle'>
+              ";
+	          echo "<a class='btn-edit' target='_blank' href='$row1[link]'>
+              <i class='$row1[icon]'></i>	
+>>>>>>> 7df285b6919e6f1b1a273fa04a3104fedd4794c1
      </a>";
+              echo "</div>
+                    </div>";           
+    }
         ?>
+<<<<<<< HEAD
         </div>
         </div>
          <div class="col-lg-3 col-md-3 col-xs-4  col-sm-4">
@@ -274,6 +295,8 @@ session_start();
 	    </a>
          </div>
         </div>
+=======
+>>>>>>> 7df285b6919e6f1b1a273fa04a3104fedd4794c1
 </div><!-- Main Row END -->
     </div><!-- Main Col END -->
     
@@ -284,33 +307,10 @@ session_start();
 </section>
 <!--Section Footer -->
 <section >
-    <div class="container-fluid">
-        <div class="row">
-          <!-- <div id="footer" class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
-              <div class="row">
-                  <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12" id="contain-footer">
-                    <div class="row">
-                        <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
-
-                        </div>
-                        <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
-
-                        </div>
-                        <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
-
-                        </div> -->
-
-                    </div><!-- End Row -->
-                  </div><!-- End Col -->
-
-              <div id="footer" class=" col-md-12 col-sm-12 col-lg-12 col-xs-12 text-center" id="reserve" style="background: #d42931;padding:10px;text-align:center;width:100%; !important">
-            <div style="padding-bottom:0px;margin-bottom: 0;color:white;">© រក្សា&#8203;សិទ្ធិ&#8203;គ្រប់&#8203;យ៉ាង&#8203;ដោយ ក្រុមហ៊ុន ធើបូថេក&#8203; ឯ.ក &#8203;ឆ្នាំ&#8203; 2020</div> 
-            </div>
-            </div>
-            </div><!-- End Row -->
-              </div> <!-- End Col -->
-        </div> <!-- End Row -->
-    </div><!-- End Contain -->
+    <footer id="footer">
+    <?php include ('footer.php') ?>
+    </footer>
+    
 </section>
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
