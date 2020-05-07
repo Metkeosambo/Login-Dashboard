@@ -1,4 +1,10 @@
+<script>
+	<?php
+	session_start();
+	$_SESSION["logout"]=="logout";
+    ?> 
 
+</script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,13 +45,14 @@
 					<span class="login100-form-title p-b-34 p-t-27">
 						Log in
 					</span>
+
 					<div class="wrap-input100 validate-input" data-validate = "Enter ID">
 						<input class="input100" type="text" name="txtid" required="required" placeholder="Your ID">
 						<span class="focus-input100" data-placeholder="&#xf207;"></span>
 					</div>
 					<div class="wrap-input100 validate-input" data-validate="Enter password">
 						<input class="input100" type="password" name="txtpassword" required="required" placeholder="Your Password">
-						<span class="focus-input100" data-placeholder="&#xf191;"></span>
+						<span class="focus-input100" data-placeholder= "&#xf191;"></span>
 					</div>
 
 					<div class="contact100-form-checkbox">
@@ -55,7 +62,7 @@
 						</label>
 					</div>
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn" name="btnLogin">
+						<button class="login100-form-btn" name="btnLogin" onclick="">
 							Login
 						</button>
 						<!-- <input class="login100-form-btn" type="submit" name="btnLogin" value="Login"> -->
@@ -71,7 +78,6 @@
 	</div>
 </body>
 </html> 
-
 <?php
 
 	$Imessage = '';
@@ -87,12 +93,12 @@
 				while($row=$stmt->fetch()){  
 						$tbId=$row['id'];
 						$tbPassword=$row['password'];
+						$tbrow = $row['department'];
 				}
 				if ($txtid == $tbId){
 					if($txtpass == $tbPassword){
+						echo $_SESSION['department'] = $tbrow;
 						header("Location: Dashboard.php");
-						
-						
 					}else {
 						echo '<script type="text/javascript">';
 						echo ' alert("លេខសំងាត់ មិនត្រឹមត្រូវ!");';//not showing an alert box.
@@ -112,3 +118,18 @@
 	}
 ?>
 
+	<div id="dropDownSelect1"></div>
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<!--===============================================================================================-->
+	<!-- <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="vendor/select2/select2.min.js"></script>
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>	
+	<script src="vendor/countdowntime/countdowntime.js"></script>	
+	<script src="js/main.js"></script> -->
+</body>
+</html>
