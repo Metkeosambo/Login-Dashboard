@@ -6,7 +6,6 @@ session_start();
 </script>
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -92,14 +91,9 @@ session_start();
 </div>
 </div>
 <div id="line" class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
-=======
-<?php include ('header.php') ?>
->>>>>>> 7df285b6919e6f1b1a273fa04a3104fedd4794c1
 
 <section class="menu">
-<<<<<<< HEAD
-<div class="container-fluid p-0">
-  
+<div class="container-fluid p-0"> 
 <!-- Bootstrap row -->
 <div class="row" id="body-row">
     <div class="col-lg-3 col-md-3 col-xs-12  col-sm-12" id="left-menu"  >
@@ -129,11 +123,9 @@ session_start();
                          <span class='$row1[icon]'></span>
                          <span class='menu-collapsed'>$row1[title]</span>    
                      </div>
-                 </a>  
-                         "; 
-                          
-                               
-                }
+                    </a>  
+                         ";            
+                    }
                      }else{
                      $stmt = $con->prepare("SELECT * from menu where title='$_SESSION[department]' AND status=1");
                      $stmt->execute();
@@ -147,7 +139,8 @@ session_start();
                       "; 
                        
                             
-             }}
+            }
+        }
     //         $sql="select * from menu where status=1";
     //         $rs=pg_query($sql);
     //         while($row = pg_fetch_assoc($rs)){
@@ -160,7 +153,7 @@ session_start();
     //          "; 
                
     //         }
-            ?>
+    ?>
             <!-- <a href="#submenu1" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-dashboard fa-fw mr-3"></span> 
@@ -208,40 +201,16 @@ session_start();
     </div><!-- sidebar-container END -->
 </div><!-- END Col  -->
     <!-- MAIN -->
-=======
-<?php include ('leftsidemenu.php') ?>
-    <!-- MAIN Contain -->
->>>>>>> 7df285b6919e6f1b1a273fa04a3104fedd4794c1
     <div class="col-lg-9 col-md-9 col-xs-12  col-sm-12" id="main-con">
         <div class="row">
              <?php
-<<<<<<< HEAD
              $sql="SELECT * from content where ";
 	     echo "<a class='btn-edit' target='_blank' href='#'>
          <i class='fab fa-facebook icon'></i>	
-=======
-               $stmt1 = $con->prepare("select id from menu where title='$_SESSION[role]' AND status=1");
-               $stmt1->execute();
-               while($row=$stmt1->fetch()){
-                $id = $row['id'];
-               }
-              $stmt = $con->prepare("select * from content where id_menu='$id' AND status=1");
-              $stmt->execute();
-              while($row1=$stmt->fetch()){
-              echo "
-              
-              <div class='col-lg-3 col-md-3 col-xs-4  col-sm-4'>
-              <div class='middle'>
-              ";
-	          echo "<a class='btn-edit' target='_blank' href='$row1[link]'>
-              <i class='$row1[icon]'></i>	
->>>>>>> 7df285b6919e6f1b1a273fa04a3104fedd4794c1
      </a>";
               echo "</div>
                     </div>";           
-    }
         ?>
-<<<<<<< HEAD
         </div>
         </div>
          <div class="col-lg-3 col-md-3 col-xs-4  col-sm-4">
@@ -295,8 +264,6 @@ session_start();
 	    </a>
          </div>
         </div>
-=======
->>>>>>> 7df285b6919e6f1b1a273fa04a3104fedd4794c1
 </div><!-- Main Row END -->
     </div><!-- Main Col END -->
     
