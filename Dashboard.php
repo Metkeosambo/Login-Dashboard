@@ -22,16 +22,18 @@ session_start();
               $stmt = $con->prepare("select * from content where id_menu='$id' AND status=1");
               $stmt->execute();
               while($row1=$stmt->fetch()){
+                $link = exec("$row1[link]");
               echo "
               
               <div class='col-lg-3 col-md-3 col-xs-4  col-sm-4'>
               <div class='middle'>
               ";
-	          echo "<a class='btn-edit' target='_blank' href='$row1[link]'>
+	          echo "<a class='btn-edit' target='_blank' href='$link'> 
               <i class='$row1[icon]'></i>	
      </a>";
               echo "</div>
-                    </div>";           
+                    </div>";
+                               
     }
         ?>
 </div><!-- Main Row END -->
