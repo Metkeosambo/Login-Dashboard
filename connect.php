@@ -1,4 +1,4 @@
 <?php
-    $con = new PDO("pgsql:host=localhost;dbname=turbotech_test", "postgres", "sambo_123!!");
+    $con = new PDO("pgsql:host=localhost;dbname=DBAdmin", "postgres", "123");
     $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
 ?>

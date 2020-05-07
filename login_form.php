@@ -1,12 +1,8 @@
 <script>
 	<?php
 	session_start();
-	if($_SESSION["logout"]=="logout"){
-    ?> alert("You have Sucessfully logged out");
-      //header('http://main.php');
-      <?php
-		
-	}?>
+	$_SESSION["logout"]=="logout";
+    ?> 
 </script>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +34,7 @@
 		<!-- <div class="container-login100" style="background-image: url('images/angkor_wat_wall.jpg');"> -->
 			<div class="container-login100"> 
 				<div class="wrap-login100">
-				<form class="login100-form validate-form" action="login_DB.php" method="POST">
+				<form class="login100-form validate-form" action="" method="POST">
 						<!-- <span class="login100-form-logo">
 							<img src="../Staff_loginV2/images/Turbotech_logo.png" alt="">
 						</span> -->
@@ -55,7 +51,7 @@
 					</div>
 					<div class="wrap-input100 validate-input" data-validate="Enter password">
 						<input class="input100" type="password" name="txtpassword" required="required" placeholder="Your Password">
-						<span class="focus-input100" data-placeholder="&#xf191;"></span>
+						<span class="focus-input100" data-placeholder= "&#xf191;"></span>
 					</div>
 
 					<div class="contact100-form-checkbox">
@@ -79,10 +75,51 @@
 			</div>
 		</div>
 	</div>
+</body>
+</html> 
+<?php
+
+	$Imessage = '';
+	$tbId = '';
+    if(isset($_POST['btnLogin'])){
+        $txtid = $_POST['txtid'];
+		$txtpass = $_POST['txtpassword'];
+		try {
+			$conn = new PDO("pgsql:host=localhost;dbname=DBAdmin", "postgres", "123");
+			$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);    
+			$stmt = $conn->prepare("SELECT * From tbl_admin2 WHERE id='$txtid'");
+			$stmt->execute(); 
+				while($row=$stmt->fetch()){  
+						$tbId=$row['id'];
+						$tbPassword=$row['password'];
+						$tbrow = $row['department'];
+				}
+				if ($txtid == $tbId){
+					if($txtpass == $tbPassword){
+						echo $_SESSION['department'] = $tbrow;
+						header("Location: Dashboard.php");
+					}else {
+						echo '<script type="text/javascript">';
+						echo ' alert("លេខសំងាត់ មិនត្រឹមត្រូវ!");';//not showing an alert box.
+						echo '</script>';
+					}
+				}else {
+					echo '<script type="text/javascript">';
+					echo ' alert("Please input the correct ID !")';  //not showing an alert box.
+					echo '</script>';  
+				} 
+			
+		}
+		catch (PDOException $e) {
+			$Imessage = "Error: " . $e->getMessage();
+		}
+		echo $Imessage;
+	}
+?>
 
 	<div id="dropDownSelect1"></div>
 	<script src="js/jquery-3.4.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 	<!--===============================================================================================-->
 	<!-- <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 	<script src="vendor/animsition/js/animsition.min.js"></script>
