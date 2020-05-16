@@ -1,7 +1,55 @@
 /*Menu Bar */
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+/* khmer */
+@font-face {
+    font-family: 'Moul';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Moul-Regular'), local('Moul-Regular'), url(../fonts/fontkhmer/Moul-Regular.woff2) format('woff2');
+    unicode-range: U+1780-17FF, U+200C, U+25CC;
+  }
+    /* khmer */
+    @font-face {
+        font-family: 'kdamthmor';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: local('KdamThmor-Regular'), local('KdamThmor-Regular'), url(../fonts/fontkhmer/KdamThmor-Regular.woff2) format('woff2');
+        unicode-range: U+1780-17FF, U+200C, U+25CC;
+      }
+/* khmer */
+@font-face {
+    font-family: 'dangrek';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Dangrek-Regular'), local('Dangrek-Regular'), url(../fonts/fontkhmer/Dangrek-Regular.woff2) format('woff2');
+    unicode-range: U+1780-17FF, U+200C, U+25CC;
+  }      
+/* khmer */
+@font-face {
+    font-family: 'Battambang';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Battambang Regular'), local('Battambang-Regular'), url(../fonts/fontkhmer/battambang.woff2) format('woff2');
+    unicode-range: U+1780-17FF, U+200C, U+25CC;
+  }
+  /* khmer */
+  @font-face {
+    font-family: 'Bayon';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Bayon Regular'), local('Bayon-Regular'), url(../fonts/fontkhmer/bayon.woff2) format('woff2');
+    unicode-range: U+1780-17FF, U+200C, U+25CC;
+  }
 
 /*-------------------------------- END ----*/
+   body{
+       font-family: 'battambang';
+   }
     #body-row {
         margin-left: 0;
         margin-right: 0;
@@ -13,14 +61,14 @@
         display: none;
     }
     #sidebar-container {
-        min-height: 83vh;
+        height: 83vh;
         background-color: #1fa8e0;
         padding: 0;
         position: fixed;
         z-index: 1030;
         margin: 0;
         padding:0;
-        margin-top: 3px;
+        margin-top: 4px;
         /* flex: unset; */
     }
     
@@ -78,13 +126,32 @@
 }
 .sun_name{
     color: #d42931;
+    
+}
+/* nav user logo */
+.dropdown-menu {
+    list-style: none;
+    text-shadow: none;
+    border-radius: 0px;
+}
+.dropdown-menu .divider {
+    margin: 2px 0;
+}
+.dropdown-menu li a{
+    text-decoration: none;
+}
+.dropdown-menu li a i {
+    padding-right: 10px;
 }
 /* End Menu*/
 .fk .widget-title{
     border-left: 3px solid #1fa8e0;
     color:#d42931;
     margin-left: 280px;
-    font-family: "Times New Roman", Times, serif;;
+    font-family: "Times New Roman", Times, serif;
+    padding-bottom: 6px;
+    margin-bottom: 10px;
+    margin-top: 1px;
 }
 .fixed-top {
     position: fixed;
@@ -128,8 +195,11 @@
 }
 /* Footer */
 #footer{
-    margin-top: 252px;
+    position: absolute;
     background-color: #d42931;
+    bottom: 0;
+    width: 100%;
+    
 }
 /* Style Content */
 .middle{
@@ -187,15 +257,11 @@
 	}
 }
 /* Use a media query to add a breakpoint at 800px: */
-@media screen and (max-width: 993px) and (min-width: 576px) {
+@media screen and (max-width: 993px) and (min-width: 746px) {
     .middle{
         padding-top: 20px;
 
     }        
-    #footer{
-        margin-top: 205px;
-        margin-left: 230px;
-    }
     .menu{
         margin-top: 150px;
     }
@@ -204,10 +270,19 @@
     }
     .sidebar-collapsed {
         /*width: 60px;*/
-        width: 100%;
+        width: 7%;
+    }
+    #sidebar-container{
+       margin-top: 0px;
+    }
+    .improve li{
+        font-size: 15px;
+    }
+    .fk .widget-title{
+        margin-left: 200px;
     }
   }
-  @media screen and (max-width: 575px) {
+  @media screen and (max-width: 745px) and (min-width: 535px) {
     .sidebar-expanded {
         width: 100%;
     }
@@ -216,7 +291,7 @@
 
     }        
     .menu{
-        margin-top: 405px;
+        margin-top: 205px;
     }
     
     .sidebar-collapsed {
@@ -227,8 +302,8 @@
         display: block;
     }
     #sidebar-container{
-        position: relative;
-        height: 50px;
+        position: static;
+        height: 400px;
     }
     .user_pro{
         margin-top: 0;
@@ -237,6 +312,55 @@
        position: relative;
     /*mobile */}
     #footer{
+        position: static;
+        margin-top: 200px;  
+        bottom: 0;     
+    }
+    .image-head{
+        text-align: center;
+    }
+    #head-image{
+        width: 150px;
+        height: 150px;
+        text-align: center;
+    }
+    #header{
+        display: none;
+    }
+}
+@media screen and (max-width: 534px) {
+    .sidebar-expanded {
+        width: 100%;
+    }
+    .middle{
+        padding-top: 20px;
+        width: 100%;
+
+    }        
+    .menu{
+        margin-top: 365px;
+    }
+    
+    .sidebar-collapsed {
+        /*width: 60px;*/
+        width: 100%;
+    }
+
+#sidebar-container{
+    position: static;
+    height: 400px;
+}
+    .navbar-toggler{
+        display: block;
+    }
+    .user_pro{
+        margin-top: 0;
+        width: 100%;
+       text-align: center;
+       position: relative;
+    /*mobile */}
+    #footer{
+        position: static;
         margin-top: 50px;
     }
     .image-head{
@@ -251,12 +375,27 @@
         display: none;
     }
 }
-  @media screen and (max-width: 1900px) and (min-width: 994px) {
-    #footer{
-        margin-top: 263px;
+  @media screen and (max-width: 1440px) and (min-width: 994px) {
+    #sidebar-container{
+        margin-top: 27px;
+     } 
+     .improve li{
+        font-size: 13px;
     }
-    
+    #sidebar-container{
+        margin-top: -10px;
+    }
    
   }
+  @media screen and (max-width: 1950px) and (min-width: 1700px) {
+    #sidebar-container{
+        margin-top: 25px;
+     } 
+     .improve li{
+        font-size: 15px;
+    }
+   
+  }
+
 
   
