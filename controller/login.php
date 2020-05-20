@@ -23,7 +23,8 @@ session_start();
             $_SESSION["depart_id"]=$depart;
             $_SESSION["userid"]=$userid;
             // header("location:../Dashboard.php");
-            header("location:../dashboard.php");
+            // header("location:../dashboard.php");
+            echo "dashboard.php";
         }else{
             echo "no have";
         }

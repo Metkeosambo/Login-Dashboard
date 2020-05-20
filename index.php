@@ -34,7 +34,7 @@
 		<!-- <div class="container-login100" style="background-image: url('images/angkor_wat_wall.jpg');"> -->
 			<div class="container-login100"> 
 				<div class="wrap-login100">
-				<form class="login100-form validate-form" action="controller/login.php" method="POST">
+				<form class="login100-form validate-form">
 						<!-- <span class="login100-form-logo">
 							<img src="../Staff_loginV2/images/Turbotech_logo.png" alt="">
 						</span> -->
@@ -61,9 +61,9 @@
 						<input class="input100" type="password" name="pass" id="pp" required="required" placeholder="Your Password">
 						<span class="focus-input100" data-placeholder="&#xf191;"></span>
 					</div>
-					<div  style="margin-bottom:10px"><small id="HelpBlockMessage" class="form-text" style="color:red"></small></div>
+					<div  style="margin-bottom:10px"><span id="HelpBlockMessage" style="color:white"></span></div>
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn" name="btnLogin" onclick='login("uname","pp")'>
+						<button type="button" class="login100-form-btn" name="btnLogin" onclick='login("uname","pp")'>
 							Login
 						</button>
 						<!-- <input class="login100-form-btn" type="submit" name="btnLogin" value="Login"> -->
@@ -72,8 +72,8 @@
 			</div>
 		</div>
 	</div>
-
-	<div id="dropDownSelect1"></div>
+</body>
+<div id="dropDownSelect1"></div>
 	<script src="storage/js/jquery-3.4.1.min.js"></script>
 <script src="storage/js/bootstrap.min.js"></script>
 	<!--===============================================================================================-->
@@ -85,7 +85,8 @@
 	<script src="vendor/daterangepicker/moment.min.js"></script>
 	<script src="vendor/daterangepicker/daterangepicker.js"></script>	
 	<script src="vendor/countdowntime/countdowntime.js"></script>	
-	<script src="js/main.js"></script> -->
+	 -->
+	 <script src="storage/js/main.js"></script>
 	<script type='text/javascript'>
 	$('input').keydown( function( event ) {
     if ( event.which === 13 ) {
@@ -94,5 +95,4 @@
     }
 });
 </script>
-</body>
 </html>

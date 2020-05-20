@@ -6,16 +6,20 @@ $('#body-row .collapse').collapse('show');
 $('#Expand-icon').addClass('fa-angle-double-left'); 
 
 // Collapse click
+var timer;
+var delay = 200;
 $('#sidebar-container').hover(function() {
-    SidebarCollapse();
+        SidebarCollapse();
 });
 
 function SidebarCollapse () {
+    $('.icon-bar').toggleClass('d-none');
     $('#menu-name').toggleClass('d-flex');
     $('.menu-collapsed').toggleClass('d-flex');
     $('.sidebar-submenu').toggleClass('d-flex');
     $('.submenu-icon').toggleClass('d-none');
     $('#sidebar-container').toggleClass('sidebar-collapsed sidebar-expanded');
+    
     
     // Treating d-flex/d-none on separators with title
     var SeparatorTitle = $('.sidebar-separator-title');
@@ -78,7 +82,7 @@ function check_session(){
 function spin(tar){
     document.getElementById(tar).innerHTML='<center></br><div class="spinner-border text-primary center" role="status"><span class="sr-only">Loading...</span></div>&nbsp&nbsp<label style="font-weight:bold;font-size:16px;">Please wait...</label></center>';
 }
-
+//Login Statement
 function login(a,b){
     a=document.getElementById(a).value;
     b=document.getElementById(b).value;
@@ -102,4 +106,49 @@ function login(a,b){
             }
         }
     });
+}
+// Table Admin
+function get_admin_view(){//top management
+    
+    // var xmlhttp = new XMLHttpRequest();
+    // xmlhttp.onreadystatechange = function() {
+    //     if (this.readyState == 4 && this.status == 200) {
+    //         document.getElementById("main-con").innerHTML = this.responseText;
+    //     }
+    // }
+    // xmlhttp.open("GET", "views/suggestion.php", true);
+    // xmlhttp.send();
+    $.ajax({
+    
+        type:'GET',
+        url: "views/admincheck.php",
+       /*  data:{
+            _session:'check',
+        }, */
+        success: function(data){
+            document.getElementById("main-con").innerHTML = data;
+            $('#tableadmin').DataTable({
+            });
+
+            $(document).ready(function(){  
+                $('.view_detail').click(function(){   
+                
+                });  
+           });  
+              
+      }
+    });
+}
+function view_detail(id){
+                     $.ajax({  
+                          url:"views/ViewModal.php",  
+                          method:"post",  
+                          data:{id:id},  
+                          success:function(data){  
+                              // get id of div in admincheck.php for show modal 
+                               $('#detail_modal').html(data);  
+                               // set time out for modal view
+                               setTimeout(function(){$('#adminModal').modal("show");},200);
+                          }  
+                     });  
 }

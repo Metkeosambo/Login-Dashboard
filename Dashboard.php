@@ -1,21 +1,17 @@
-<script>
 <?php
 session_start();
 include("connection/connect.php");
 $connection=new Database();
 $conn=$connection->dbConnection();
-
 	?>
-</script>
 <!DOCTYPE html>
 <html lang="en">
 <?php include ('header.php') ?>
-
 <section class="menu">
 <?php include ('leftsidemenu.php') ?>
     <!-- MAIN Contain -->
      <!-- MAIN Contain -->
-    <div class="col-lg-9 col-md-9 col-xs-12  col-sm-12" id="main-con">
+    <div class="col-lg-10 col-md-10 col-xs-12  col-sm-12" id="main-con">
         <div class="row">
              <?php
                 $stmt1 = $conn->prepare("select id from main_app_menu where depertement_id=".$_SESSION['depart_id']." AND status='t'");
@@ -53,18 +49,22 @@ $conn=$connection->dbConnection();
 </div><!-- container -->
 </section>
 <!--Section Footer -->
-<section >
     <footer id="footer">
     <?php include ('footer.php') ?>
-    </footer>
-    
-</section>
+    </footer>  
 <script>
 </script>
 <script src="storage/js/jquery-3.4.1.min.js"></script>
 <script src="storage/js/bootstrap.min.js"></script>
 <script src="storage/js/main.js"></script>
 <script src="storage/js/all.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <!-- Datatable JS -->
+  <script src="storage/DataTables/datatables.min.js"></script>
+<!-- Scipt admin -->
+<script>
+    
 
+</script>
 </body>
 </html>

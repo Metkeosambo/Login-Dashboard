@@ -2,7 +2,7 @@
   
 <!-- Bootstrap row -->
 <div class="row" id="body-row">
-    <div class="col-lg-3 col-md-3 col-xs-12  col-sm-12" id="left-menu"  >
+    <div class="col-lg-2 col-md-2 col-xs-12  col-sm-12" id="left-menu"  >
     <!-- Sidebar -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebar-container" aria-controls="sidebar-container" aria-expanded="false" aria-label="Toggle navigation">
     <span style="color:black;" class="icon-bar">
@@ -13,18 +13,19 @@
         <!-- Bootstrap List Group -->
         <ul class="list-group">
             <!-- Separator with title -->
-            <li class="list-group-item sidebar-separator-title text-muted d-none align-items-center ">
-                <small id="menu-name">MAIN MENU</small>
+            <li class="list-group-item sidebar-separator-title text-muted align-items-center ">
+            <span style="color:#d42931;font-size:23px;" class="fas fa-bars icon-bar d-flex mr-3 align-items-center title-icon">
+            </span><small id="menu-name" class="d-none">MAIN MENU</small>
             </li>
             <!-- /END Separator -->
             <!-- Menu with submenu -->
             <?php
                      if($_SESSION["depart_id"]=='8'){
                         // $sql="select * from menu where status=1 order by id ASC";
-                        $stmt = $conn->prepare("select * from main_app_menu");
+                        $stmt = $conn->prepare("select * from main_app_menu order by id ASC");
                         $stmt->execute();
                         while($row1=$stmt->fetch()){
-                         echo  "<a href='$row1[link]' data-val='$row1[title]' class='bg-dark list-group-item list-group-item-action'>
+                         echo  "<a href='$row1[link]' data-val='$row1[title]' class='list-group-item list-group-item-action'>
                          <div class='d-flex w-100 justify-content-start align-items-center'>
                          <span class='$row1[icon]'></span>
                          <span class='menu-collapsed d-none'>$row1[title]</span>    
@@ -35,10 +36,10 @@
                                
                 }
                      }else{
-                     $stmt = $conn->prepare("select * from main_app_menu where depertement_id=".$_SESSION['depart_id']."");
+                     $stmt = $conn->prepare("select * from main_app_menu where depertement_id=".$_SESSION['depart_id']." order by id ASC");
                      $stmt->execute();
                         while($row1=$stmt->fetch()){
-                      echo  "<a href='$row1[link]' class='bg-dark list-group-item list-group-item-action'>
+                      echo  "<a href='$row1[link]' class='list-group-item list-group-item-action'>
                       <div class='d-flex w-100 justify-content-start align-items-center'>
                       <span class='$row1[icon]'></span>
                       <span class='menu-collapsed d-none'>$row1[title]</span>    
@@ -96,8 +97,15 @@
                 </a>
             </div>       -->
             <!-- Collape -->
-            <li class="list-group-item sidebar-separator d-flex"></li>            
-            <a href="javascript:void(0);" onclick="suggestForm()" class="bg-dark list-group-item list-group-item-action d-flex align-items-center">
+            <li class="list-group-item sidebar-separator d-flex"></li>         
+            <?php 
+              if($_SESSION["depart_id"]=='8'){
+                  echo "<a href='javascript:void(0);' onclick='get_admin_view()' class='list-group-item list-group-item-action d-flex align-items-center'>";
+              }else{
+                  echo "<a href='javascript:void(0);' onclick='suggestForm()' class='list-group-item list-group-item-action d-flex align-items-center'>";
+              }
+            ?>   
+            
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span id="Expand-icon" class="far fa-sticky-note mr-3"></span>
                     <span id="collapse-text" class="menu-collapsed d-none">Suggestion</span>

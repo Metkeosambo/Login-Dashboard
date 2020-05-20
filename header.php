@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="storage/css/all.css">
     <link rel="stylesheet" href="storage/css/font-awesome.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+     <!-- Datatable CSS -->
+     <link href='storage/DataTables/datatables.min.css' rel='stylesheet' type='text/css'>
     <title>DashBoard</title>
 </head>
 <body>
