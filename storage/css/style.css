@@ -46,35 +46,98 @@
   }
 
 /*-------------------------------- END ----*/
-   body{
+html{
+    height: 100%;
+}   
+body{
        font-family: 'battambang';
+       height: 100%;
    }
+   /* header top */
+   .header-top{
+       width: 100%;
+       height: 40px;
+       background-color: #1fa8e0;
+   }
+   .language_option {
+    padding: 5px 0 5px 0 !important;
+    cursor: pointer;
+    display: inline-block;
+}
+.language_option ul li {
+    margin-left: 1px;
+    display: inline;
+    text-shadow: none;
+}
+.header-social-links {
+    padding: 0 0 5px 0 !important;
+    text-align: right;
+}
+.header-social-links li {
+    display: inline;
+    padding: 2px;
+}
+.header-social-links li ul li a {
+    padding: 0px 7px 0px 7px !important;
+    color: #fff;
+}
+.improve{
+    list-style: none;
+}
+.improve li{
+    float: left;
+}
+.improve li a{
+    text-decoration: none;
+    display: inline;
+    color: black;
+    transition: font-size 0.2s ease-in;
+    line-height: 1;
+    font-weight: bold;
+    font-family: 'Times New Roman';
+}
+.improve li span{
+    font-size: 20px;
+    color: #d42931;
+  }
+.improve li a:hover {
+    color: #d42931;
+    font-size: 18px;
+  }
+.img-circle {
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+   /* END Header TOP */
     #body-row {
         margin-left: 0;
         margin-right: 0;
     }
+    #main-con{  
+        margin-bottom: 25px;
+        margin-top: 90px;
+        height: 100%;
+        
+    }
     #left-menu{
         margin-left: -15px;
+        margin-bottom: 30px;
     }
     .navbar-toggler{
         display: none;
     }
     #sidebar-container {
-        height: 83vh;
+        position: fixed; 
+        height: 100%;
         background-color: #1fa8e0;
         padding: 0;
-        position: fixed;
-        z-index: 1030;
-        margin: 0;
-        padding:0;
-        margin-top: 4px;
+         z-index:1; 
+        
         /* flex: unset; */
     }
-    #sidebar-container:hover{
-        transition: ease-in-out 0.2s;
-    }
     .sidebar-expanded {
-        width: 230px;
+        width: 200px;
     }
     .sidebar-collapsed {
         /*width: 60px;*/
@@ -100,12 +163,13 @@
         background-color: #1fa8e0;
         border-top-right-radius: 0;
         border-top-left-radius: 0;
-  
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;     
     }
     
     #sidebar-container .list-group .sidebar-submenu a {
         height: 45px;
-        padding-left: 30px;
+        padding-left: 30px;  
     }
     
     .sidebar-submenu {
@@ -171,6 +235,7 @@
     left: 0;
     z-index: 1030;
     background-color: white;
+    height: 145px;
 }
 #line{
     width: 100%;
@@ -179,10 +244,10 @@
     padding-bottom: 5px;
 }
 .menu{
-    margin-top: 120px;
+    margin-top: 150px;
 }
 .search{
- margin-top: 70px;  
+ margin-top: 55px;  
 }
 #search{
     width: 100%;
@@ -217,9 +282,7 @@
     display: block;
     
 }
-#main-con{
-    margin-bottom: 25px;
-}
+
 /* Style Content */
 .middle{
 	padding-top: 70px;
@@ -295,9 +358,6 @@ td{
         padding-top: 20px;
 
     }        
-    .menu{
-        margin-top: 150px;
-    }
     /* #main-con{ 
         margin-left: 230px;
     } */
@@ -305,14 +365,18 @@ td{
         /*width: 60px;*/
         width: 7%;
     }
-    #sidebar-container{
-       margin-top: -27px;
-    }
     .improve li{
         font-size: 12px;
     }
     .fk .widget-title{
         margin-left: 200px;
+    }
+    #main-con{
+        margin-top: 160px;
+        margin-left: 10px;
+    }
+    #left-menu{
+        margin-top: 163px;
     }
   }
   @media screen and (max-width: 745px) and (min-width: 535px) {
@@ -323,9 +387,6 @@ td{
         padding-top: 20px;
 
     }        
-    .menu{
-        margin-top: 205px;
-    }
     .title-icon{
         display: none;
     }
@@ -362,6 +423,12 @@ td{
     #header{
         display: none;
     }
+    #main-con{
+        margin-top: 0px;
+    }
+    #left-menu{
+        margin-top: 165px;
+    }
 }
 @media screen and (max-width: 534px) {
     .sidebar-expanded {
@@ -375,18 +442,25 @@ td{
         width: 100%;
 
     }        
-    .menu{
-        margin-top: 365px;
+    #main-con{
+        margin-top: 0px;
+    }
+    #left-menu{
+        margin-top: 265px;
     }
     
     .sidebar-collapsed {
         /*width: 60px;*/
         width: 100%;
     }
+    .fixed-top{
+        height: 257px;;
+    }
 
 #sidebar-container{
     position: static;
     height: 400px;
+    overflow-x: none;
 }
     .navbar-toggler{
         display: block;
@@ -415,62 +489,103 @@ td{
 }
   @media screen and (max-width: 1150px) and (min-width: 994px) {
     #sidebar-container{
-        margin-top: 4px;
+        margin-top: 150px;
      } 
      .improve li{
         font-size: 12px;
+    }
+    #main-con{
+        margin-top: 100px;
     }
   }
   @media screen and (max-width: 1389px) and (min-width: 1151px) {
     #sidebar-container{
-        margin-top: -13px;
+        margin-top: 145px;
      } 
      .improve li{   
-        font-size: 12px;
+        font-size: 14px;
     }
+    
   }
   @media screen and (max-width: 1578px) and (min-width: 1390px) {
     #sidebar-container{
-        margin-top: -10px;
+        margin-top:145px;
      } 
-     .improve li{
-        font-size: 13px;
+    .improve li a{
+       font-size: 15px;
     }
+    .improve li span{
+        font-size: 23px;
+    
+      }
+    .improve li a:hover {
+        font-size: 20px;
+      }
   }
   @media screen and (max-width: 1729px) and (min-width: 1579px) {
     #sidebar-container{
-        margin-top: 6px;
-     } 
-     .improve li{
-        font-size: 13px;
-    }
+        margin-top: 145px;
+     }
+    .improve li a{
+        font-size: 17px;
+     }
+     .improve li span{
+         font-size: 25px;
+     
+       }
+     .improve li a:hover {
+         font-size: 23px;
+       }
   }
   
   @media screen and (max-width: 1798px) and (min-width: 1730px) {
     #sidebar-container{
-        margin-top: 10px;
+        margin-top: 145px;
      } 
-     .improve li{
-        font-size: 15px;
-    }
+     .improve li a{
+        font-size: 19px;
+     }
+     .improve li span{
+         font-size: 28px;
+     
+       }
+     .improve li a:hover {
+         font-size: 25px;
+       }
+
    
   }
   @media screen and (max-width: 2143px) and (min-width: 1799.3px) {
     #sidebar-container{
-        margin-top: 26px;
+        margin-top: 145px;
+        height: 100%;
      } 
-     .improve li{
-        font-size: 20px;
-    }
+     .improve li a{
+        font-size: 22px;
+     }
+     .improve li span{
+         font-size: 30px;
+     
+       }
+     .improve li a:hover {
+         font-size: 27px;
+       }
    
   }
   @media screen and (max-width: 2560px) and (min-width: 2144px) {
     #sidebar-container{
-        margin-top: 57px;
+        margin-top: 145px;
      } 
-     .improve li{
-        font-size: 17px;
-    }
+     .improve li a{
+        font-size: 25px;
+     }
+     .improve li span{
+         font-size: 35px;
+     
+       }
+     .improve li a:hover {
+         font-size: 32px;
+       }
    
   }
 

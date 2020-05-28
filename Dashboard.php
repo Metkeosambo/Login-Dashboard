@@ -1,5 +1,4 @@
 <?php
-session_start();
 include("connection/connect.php");
 $connection=new Database();
 $conn=$connection->dbConnection();
@@ -7,11 +6,11 @@ $conn=$connection->dbConnection();
 <!DOCTYPE html>
 <html lang="en">
 <?php include ('header.php') ?>
-<section class="menu">
+
 <?php include ('leftsidemenu.php') ?>
     <!-- MAIN Contain -->
      <!-- MAIN Contain -->
-    <div class="col-lg-10 col-md-10 col-xs-12  col-sm-12" id="main-con">
+    <div class="col-lg-10 col-md-10 col-xs-10 col-sm-12" id="main-con">
         <div class="row">
              <?php
                 $stmt1 = $conn->prepare("select id from main_app_menu where depertement_id=".$_SESSION['depart_id']." AND status='t'");
@@ -47,7 +46,6 @@ $conn=$connection->dbConnection();
   
   
 </div><!-- container -->
-</section>
 <!--Section Footer -->
     <footer id="footer">
     <?php include ('footer.php') ?>
@@ -63,8 +61,7 @@ $conn=$connection->dbConnection();
   <script src="storage/DataTables/datatables.min.js"></script>
 <!-- Scipt admin -->
 <script>
-    
-
+  
 </script>
 </body>
 </html>

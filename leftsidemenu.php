@@ -1,22 +1,23 @@
-<div class="container-fluid p-0">
+<div class="container-fluid p-0" id="container">
   
 <!-- Bootstrap row -->
 <div class="row" id="body-row">
-    <div class="col-lg-2 col-md-2 col-xs-12  col-sm-12" id="left-menu"  >
+    <div class="col-lg-2 col-md-2 col-xs-2 col-sm-12" id="left-menu"  >
     <!-- Sidebar -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebar-container" aria-controls="sidebar-container" aria-expanded="false" aria-label="Toggle navigation">
     <span style="color:black;" class="icon-bar">
     <i style="color:black;font-size:30px;" class="fas fa-bars"></i>
    </span>
   </button>
-    <div id="sidebar-container" class=" sidebar-collapsed d-md-block collapse navbar-collapse"><!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
+    <div id="sidebar-container" class=" sidebar-expanded d-md-block collapse navbar-collapse"><!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
         <!-- Bootstrap List Group -->
         <ul class="list-group">
             <!-- Separator with title -->
-            <li class="list-group-item sidebar-separator-title text-muted align-items-center ">
-            <span style="color:#d42931;font-size:23px;" class="fas fa-bars icon-bar d-flex mr-3 align-items-center title-icon">
-            </span><small id="menu-name" class="d-none">MAIN MENU</small>
+            <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
+            <span style="color:#d42931;font-size:23px;" class="fas fa-bars icon-bar mr-3 align-items-center title-icon">
+            </span><small id="menu-name" class="menu-collapsed" >MENU</small>
             </li>
+
             <!-- /END Separator -->
             <!-- Menu with submenu -->
             <?php
@@ -28,7 +29,7 @@
                          echo  "<a href='$row1[link]' data-val='$row1[title]' class='list-group-item list-group-item-action'>
                          <div class='d-flex w-100 justify-content-start align-items-center'>
                          <span class='$row1[icon]'></span>
-                         <span class='menu-collapsed d-none'>$row1[title]</span>    
+                         <span class='menu-collapsed'>$row1[title]</span>    
                      </div>
                  </a>  
                          "; 
@@ -42,7 +43,7 @@
                       echo  "<a href='$row1[link]' class='list-group-item list-group-item-action'>
                       <div class='d-flex w-100 justify-content-start align-items-center'>
                       <span class='$row1[icon]'></span>
-                      <span class='menu-collapsed d-none'>$row1[title]</span>    
+                      <span class='menu-collapsed'>$row1[title]</span>    
                   </div>
               </a>  
                       "; 
@@ -96,19 +97,27 @@
                     <span class="menu-collapsed">Password</span>
                 </a>
             </div>       -->
-            <!-- Collape -->
-            <li class="list-group-item sidebar-separator d-flex"></li>         
+            <!-- Suggestions -->
+            <li class="list-group-item sidebar-separator menu-collapsed"></li>         
             <?php 
               if($_SESSION["depart_id"]=='8'){
-                  echo "<a href='javascript:void(0);' onclick='get_admin_view()' class='list-group-item list-group-item-action d-flex align-items-center'>";
+                  echo "<a href='javascript:void(0);' onclick='get_admin_view()' class='list-group-item list-group-item-action d-flex'>";
               }else{
-                  echo "<a href='javascript:void(0);' onclick='suggestForm()' class='list-group-item list-group-item-action d-flex align-items-center'>";
+                  echo "<a href='javascript:void(0);' onclick='suggestForm()' class='list-group-item list-group-item-action d-flex'>";
               }
             ?>   
             
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span id="Expand-icon" class="far fa-sticky-note mr-3"></span>
-                    <span id="collapse-text" class="menu-collapsed d-none">Suggestion</span>
+                    <span id="collapse-text" class="menu-collapsed">Suggestion</span>
+                </div>
+            </a>
+             <!-- Collape -->
+             <li class="list-group-item sidebar-separator menu-collapsed"></li>            
+            <a style="border-bottom-right-radius:0;border-bottom-left-radius:0;   " href="#" data-toggle="sidebar-colapse" class="list-group-item list-group-item-action d-flex">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span id="collapse-icon" class="fa fa-2x fa-angle-double-left mr-3"></span>
+                    <span id="collapse-text" class="menu-collapsed">Collapse</span>
                 </div>
             </a>
             

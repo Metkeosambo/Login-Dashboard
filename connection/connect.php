@@ -2,7 +2,7 @@
  class Database{
 
     private $db_host = '172.17.168.27';
-    private $db_name = 'stockdev';
+    private $db_name = 'MainApp';
     private $db_username = 'sros';
     private $db_password = 'Sros123';
 

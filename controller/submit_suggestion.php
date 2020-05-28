@@ -23,7 +23,7 @@ session_start();
         foreach($question_radio as $key=>$value){
           
            /* if(!empty($anw_id[$key])){  */
-         echo  $sql = "SELECT public.insert_hr_suggestion_submit(
+           $sql = "SELECT public.insert_hr_suggestion_submit(
               $value, 
               ".$_POST['radio_ans'.$value].", 
               null
