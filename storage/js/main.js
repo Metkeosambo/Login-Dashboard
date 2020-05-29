@@ -140,3 +140,26 @@ function view_detail(id){
                           }  
                      });  
 }
+function get_content_view(id){
+    if(check_session()){
+    return;
+}
+spin('main-con');
+// var xmlhttp = new XMLHttpRequest();
+// xmlhttp.onreadystatechange = function() {
+//     if (this.readyState == 4 && this.status == 200) {
+//         document.getElementById("main-con").innerHTML = this.responseText;
+//     }
+// }
+// xmlhttp.open("GET", "views/suggestion.php", true);
+// xmlhttp.send();
+$.ajax({
+
+    type:'POST',
+    data:{id:id}, 
+    url: "views/content.php",
+    success: function(data){
+        document.getElementById("main-con").innerHTML = data;
+  }
+});
+}

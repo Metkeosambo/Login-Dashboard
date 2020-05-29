@@ -10,7 +10,7 @@
 	<title>Form Staff Login</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/png" href="storage/images/icons/favicon.ico"/>
+	<link rel="shortcut icon" type="image/x-icon" href="storage/images/icons/icon.ico" />
 	<link rel="stylesheet" type="text/css" href="storage/css/bootstrap.min.css?ver=<?= rand() ?>">
 	<link rel="stylesheet" type="text/css" href="storage/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="storage/fonts/iconic/css/material-design-iconic-font.min.css">

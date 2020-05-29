@@ -1,6 +1,5 @@
 
-<div class="col-lg-10 col-md-10 col-xs-12  col-sm-12" id="main-con">
-      <div class='row'>
+      <div class='container'>
       <div class="col-lg-12 col-md-12 col-xs-12  col-sm-12" >
       <h3 class="text-center"> Suggestion Form </h3>
       </div>
@@ -49,11 +48,8 @@
       </div> <!-- End Card header -->
       <div class="card-footer">
         <button class="btn btn-primary text-center" type="submit">Submit</button>
-      </form></div>
-      </div> <!-- End Card -->
-      
-      
-
-           
+      </form>
+      </div>
+      </div> <!-- End Card -->     
        </div><!-- Main Row END -->
-    </div><!-- Main Col END -->
+
