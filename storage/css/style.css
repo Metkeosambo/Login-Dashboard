@@ -375,10 +375,15 @@ td{
     }
     #main-con{
         margin-top: 10px;
-        margin-left: 185px;
+        margin-left: 186px;
     }
     #left-menu{
         margin-top: 10px;
+    }
+    #head-image{
+        width: 160px;
+        height: 160px;
+        text-align: center;
     }
   }
   @media screen and (max-width: 745px) and (min-width: 535px) {
@@ -485,8 +490,8 @@ td{
         text-align: center;
     }
     #head-image{
-        width: 150px;
-        height: 150px;
+        width: 200px;
+        height: 200px;
         text-align: center;
     }
     #header{
@@ -506,16 +511,26 @@ td{
     /* #main-con{
         margin-top: 100px;
     } */
+    #head-image{
+        width: 180px;
+        height: 180px;
+        text-align: center;
+    }
   }
   @media screen and (max-width: 1389px) and (min-width: 1151px) {
     /* #sidebar-container{
          margin-top: 145px; 
      }  */
      #body-row {
-        margin-top: 145px;
+        margin-top: 143px;
     }
      .improve li{   
         font-size: 14px;
+    }
+    #head-image{
+        width: 180px;
+        height: 180px;
+        text-align: center;
     }
     
   }
@@ -524,7 +539,7 @@ td{
         margin-top:145px;
      }  */
      #body-row {
-        margin-top: 155px;
+        margin-top: 152px;
     }
     .improve li a{
        font-size: 15px;
@@ -536,6 +551,11 @@ td{
     .improve li a:hover {
         font-size: 20px;
       }
+      #head-image{
+        width: 200px;
+        height: 200px;
+        text-align: center;
+    }
   }
   @media screen and (max-width: 1729px) and (min-width: 1579px) {
     /* #sidebar-container{
@@ -554,6 +574,11 @@ td{
      .improve li a:hover {
          font-size: 23px;
        }
+       #head-image{
+        width: 230px;
+        height: 230px;
+        text-align: center;
+    }
   }
   
   @media screen and (max-width: 1798px) and (min-width: 1730px) {
@@ -573,7 +598,11 @@ td{
      .improve li a:hover {
          font-size: 25px;
        }
-
+       #head-image{
+        width: 230px;
+        height: 230px;
+        text-align: center;
+    }
    
   }
   @media screen and (max-width: 2143px) and (min-width: 1799.3px) {
@@ -582,7 +611,7 @@ td{
         height: 100%;
      }  */
      #body-row {
-        margin-top: 195px;
+        margin-top: 190px;
     }
      .improve li a{
         font-size: 22px;
@@ -594,6 +623,11 @@ td{
      .improve li a:hover {
          font-size: 27px;
        }
+       #head-image{
+        width: 270px;
+        height: 270px;
+        text-align: center;
+    }
    
   }
   @media screen and (max-width: 2560px) and (min-width: 2144px) {
@@ -601,7 +635,7 @@ td{
         margin-top: 145px;
      }  */
      #body-row {
-        margin-top: 220px;
+        margin-top: 190px;
     }
      .improve li a{
         font-size: 25px;
@@ -613,6 +647,11 @@ td{
      .improve li a:hover {
          font-size: 32px;
        }
+       #head-image{
+        width: 270px;
+        height: 270px;
+        text-align: center;
+    }
    
   }
 

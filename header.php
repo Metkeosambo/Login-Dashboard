@@ -77,7 +77,7 @@ $conn=$connection->dbConnection();
                         </div><!-- END ROW Header-top -->
                         <div class="row">
                                 <div class="col-md-2 col-sm-5 col-lg-2 col-xs-2 image-head" style="height:100%">
-                                    <img src="storage/images/turbotech.png" style="text-align:center;height:100%" id="head-image"class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+                                    <img src="storage/images/turbotech.png" style="text-align:center;height:100%" id="head-image" alt="">
                                 </div> <!-- End Logo -->
                                 <div id="header" class="col-sm-12 col-xs-1 col-md-8 col-lg-8 pull-right">
                                     <div class="row" style="height:40px;">
