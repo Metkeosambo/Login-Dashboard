@@ -84,28 +84,28 @@ $conn=$connection->dbConnection();
                                         <div class="col-sm-3 col-xs-3 col-md-3 col-lg-3">
                                             <div class="main-improve">
                                                 <ul class="improve">
-                                                <li><i class="fas fa-user-graduate" style="color:#1fa8e0;font-size: 20px"></i> <a  href="#" class="post-badge btn_six"><span>I</span>ntelligence</a></li> 
+                                                <li><i class="fas fa-user-graduate" id="head-icon" style="color:#1fa8e0;"></i> <a  href="#" class="post-badge btn_six"><span>I</span>ntelligence</a></li> 
                                                 </ul>  
                                             </div>
                                         </div>
                                         <div class="col-sm-3 col-xs-3 col-md-3 col-lg-3">
                                             <div class="main-improve">
                                                 <ul class="improve">
-                                                <li><i class="fas fa-handshake" style="color:#1fa8e0;font-size: 20px"></i> <a  href="#" class="post-badge btn_six"><span>M</span>orality</a></li>
+                                                <li><i class="fas fa-handshake" id="head-icon" style="color:#1fa8e0;"></i> <a  href="#" class="post-badge btn_six"><span>M</span>orality</a></li>
                                                 </ul>  
                                             </div>
                                         </div>  
                                         <div class="col-sm-3 col-xs-3 col-md-3 col-lg-3">
                                             <div class="main-improve">
                                                 <ul class="improve">
-                                                <li><i class="fas fa-user-tie" style="color:#1fa8e0;font-size: 20px"></i> <a  href="#" class="post-badge btn_six"><span>P</span>rofessional</a></li>
+                                                <li><i class="fas fa-user-tie" id="head-icon" style="color:#1fa8e0;"></i> <a  href="#" class="post-badge btn_six"><span>P</span>rofessional</a></li>
                                                 </ul>  
                                             </div>
                                         </div> 
                                         <div class="col-sm-3 col-xs-3 col-md-3 col-lg-3">
                                                 <div class="main-improve">
                                                     <ul class="improve">
-                                                    <li><i class="fas fa-user-check"  style="color:#1fa8e0;font-size: 20px"></i> <a  href="#" class="post-badge btn_six"><span>E</span>fficiency</a></li>
+                                                    <li><i class="fas fa-user-check" id="head-icon"  style="color:#1fa8e0;"></i> <a  href="#" class="post-badge btn_six"><span>E</span>fficiency</a></li>
                                                     </ul>  
                                                 </div>
                                             </div>       
@@ -114,21 +114,21 @@ $conn=$connection->dbConnection();
                                             <div class="col-sm-5 col-xs-5 col-md-5 col-lg-5">
                                                 <div class="main-improve">
                                                     <ul class="improve">
-                                                    <li><i class="fas fa-user-clock" style="color:#1fa8e0;font-size: 20px"></i> <a  href="#" class="post-badge btn_six"><span>R</span>esponsibility & Accountability</a></li>
+                                                    <li><i class="fas fa-user-clock" id="head-icon" style="color:#1fa8e0;"></i> <a  href="#" class="post-badge btn_six"><span>R</span>esponsibility & Accountability</a></li>
                                                     </ul>  
                                                 </div>
                                             </div>
                                             <div class="col-sm-3 col-xs-3 col-md-3 col-lg-3">
                                                 <div class="main-improve" >
                                                     <ul class="improve">
-                                                    <li><i class="fas fa-people-carry" style="color:#1fa8e0;font-size: 20px"></i> <a href="#" class="post-badge btn_six"><span>O</span>ptimistic</a></li>
+                                                    <li><i class="fas fa-people-carry" id="head-icon" style="color:#1fa8e0;"></i> <a href="#" class="post-badge btn_six"><span>O</span>ptimistic</a></li>
                                                     </ul>  
                                                 </div>
                                             </div>  
                                             <div class="col-sm-3 col-xs-3 col-md-3 col-lg-3">
                                                 <div class="main-improve">
                                                     <ul class="improve">
-                                                    <li><i class="fas fa-user-shield" style="color:#1fa8e0;font-size: 20px"></i> <a  href="#" class="post-badge btn_six"><span>V</span>igilant</a></li>
+                                                    <li><i class="fas fa-user-shield" id="head-icon" style="color:#1fa8e0;"></i> <a  href="#" class="post-badge btn_six"><span>V</span>igilant</a></li>
                                                     </ul>  
                                                 </div>
                                             </div>    
@@ -136,7 +136,7 @@ $conn=$connection->dbConnection();
                                 </div> <!--END Header Pull right-->
                                 <div class="col-md-2 col-sm-5 col-lg-2 col-xs-2 search" >
                                     <form class="form-inline my-2 my-lg-0 form-search" style=" margin-right:5px">
-                                        <input class="form-control mr-sm-2 my-sm-0 " type="text" placeholder="ស្វែងរក" id="search">
+                                        <input class="form-control mr-sm-2 my-sm-0 " type="text" placeholder="Search" id="search">
                                     </form>
                                 </div>
                                 <div id="line" class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
